@@ -22,7 +22,7 @@ export default {
     return {
       hideCompleted: false,
       newTodo: "",
-      todos: [{id: id++, text: 'Vue'}],
+      todos: [{id: id++, text: 'Vue123'}],
     };
   },
   methods: {
