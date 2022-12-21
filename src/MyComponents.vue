@@ -1,10 +1,12 @@
 <template>
   <div :class="mainContent">
     <h1>Todos</h1>
-    <ul class="list">
-      <li v-for="todo in filterTodo" :key="todo.id">
-        <input type="checkbox" v-model="todo.done" />
-        <span :class="{ done: todo.done }">{{ todo.text }}</span>
+    <ul>
+      <li class="list" v-for="todo in filterTodo" :key="todo.id">
+        <div>
+          <input type="checkbox" v-model="todo.done" />
+          <label :class="{ done: todo.done }">{{ todo.text }}</label>
+        </div>
         <div class="close" @click="removeTodo(todo)"></div>
       </li>
     </ul>
@@ -59,28 +61,44 @@ export default {
   max-width: 350px;
 }
 
-.list {
-  padding: 0;
-  width: 50%;
-  list-style-type: none;
+.main-content form{
+	margin: 20px;
 }
 
-.list li {
+.main-content ul {
+  padding: 0;
+}
+
+.list {
   position: relative;
+  padding: 8px;
+  width: 260px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  margin: 10px 0;
+}
+
+.list span {
+  font-size: 21px;
 }
 
 .close {
-  position: absolute;
+  position: relative;
   height: 30px;
   width: 30px;
-  top: 4px;
-  right: 4px;
   cursor: pointer;
   border-radius: 50%;
   opacity: 0.2;
   background-color: red;
   -webkit-transition: opacity ease 0.5s;
   transition: opacity ease 0.5s;
+}
+
+.close:hover {
+  opacity: 1;
 }
 
 .close::before,
@@ -104,7 +122,11 @@ export default {
 }
 
 input {
-  padding: 10px 30px;
-  font-size: 15px;
+	cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #1a191f;
 }
 </style>
