@@ -1,0 +1,162 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+.back-conteiner {
+	height: 100vh;
+	background: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(45, 147, 253, 1) 100%);
+}
+
+.todo-list {
+	font-family: 'Comfortaa', cursive;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 50em;
+	margin: 0 auto;
+	max-width: 400px;
+}
+
+.todo-list__add-btn {
+	position: relative;
+	cursor: pointer;
+	height: 45px;
+	width: 45px;
+	border: 1px;
+	background-color: #9C32FB;
+	border-radius: 4px;
+}
+
+.todo-list__add-btn::before,
+.todo-list__add-btn::after {
+	position: absolute;
+	content: "";
+	width: 20px;
+	height: 4px;
+	background-color: white;
+	display: block;
+	left: 29%;
+	top: 45%;
+	border-radius: 4px;
+}
+
+.todo-list__add-btn::before {
+	transform: rotate(0deg);
+}
+
+.todo-list__add-btn::after {
+	transform: rotate(-90deg);
+}
+
+
+.todo-conteiner {
+	background-color: aliceblue;
+	padding: 40px;
+	border-radius: 10px;
+	box-shadow: 0 5px 15px 0 rgb(0 0 0 / 20%);
+}
+
+.todo-list__title {
+	display: flex;
+}
+
+.todo-list__form {
+	display: flex;
+	margin: 20px 0;
+	width: 316px;
+	justify-content: space-between;
+}
+
+.list {
+	position: relative;
+	padding: 10px;
+	list-style-type: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 45px;
+	margin: 15px 0;
+	background-color: #85858529;
+	border-radius: 4px;
+}
+
+.list-item {
+	display: flex;
+	align-items: center;
+}
+
+.list-item__text {
+	margin-left: 10px;
+}
+
+.close {
+	position: relative;
+	height: 30px;
+	width: 30px;
+	cursor: pointer;
+	border-radius: 50%;
+	opacity: 0.2;
+	background-color: red;
+	-webkit-transition: opacity ease 0.5s;
+	transition: opacity ease 0.5s;
+}
+
+.close:hover {
+	opacity: 1;
+}
+
+.close::before,
+.close::after {
+	position: absolute;
+	content: "";
+	width: 22px;
+	height: 2px;
+	background-color: white;
+	display: block;
+	top: 14px;
+	right: 4px;
+}
+
+.close::after {
+	transform: rotate(45deg);
+}
+
+.close::before {
+	transform: rotate(-45deg);
+}
+
+input {
+	height: 45px;
+	padding: 10px;
+	font-size: 19px;
+	border-radius: 3px;
+	outline: none;
+	border: 1px solid #1a191f42;
+	background-color: aliceblue;
+}
+
+.label-text {
+	font-size: 20px;
+}
+
+.change-btn {
+	padding: 10px;
+	border: 1px;
+	border-radius: 4px;
+	background-color: #9C32FB;
+	color: aliceblue;
+	font-family: 'Comfortaa', cursive;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.checked-input {
+	height: 20px;
+	width: 20px;
+}
