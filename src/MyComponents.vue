@@ -3,7 +3,7 @@
     <div class="todo-list">
       <div class="todo-conteiner">
         <div class="todo-list__title">
-          <h1>Todo App</h1>
+          <h1>Todo Apps</h1>
         </div>
         <form @submit.prevent="addTodo" class="todo-list__form">
           <input v-model="newTodo" placeholder="Add your new todo"/>
