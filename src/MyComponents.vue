@@ -41,7 +41,9 @@ export default {
   },
   methods: {
     addTodo() {
-      this.todos.push({ id: id++, text: this.newTodo }), 
+      if (this.newTodo !== '') {
+				this.todos.push({ id: id++, text: this.newTodo })
+			} 
 			(this.newTodo = "");
     },
     removeTodo(item) {
