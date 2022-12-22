@@ -35,7 +35,7 @@ export default {
     return {
       hideCompleted: false,
       newTodo: "",
-      todos: [],
+      todos: [{id: id++, text: 'I love cats'}],
       mainContent: "main-content",
     };
   },
