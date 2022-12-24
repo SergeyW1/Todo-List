@@ -93,6 +93,7 @@
 
 .list-item__text {
 	margin-left: 10px;
+	max-width: 224px;
 }
 
 .close {
